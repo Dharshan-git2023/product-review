@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Review Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="review-container">
+    <h2>🌟 Product Review Form</h2>
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="Your Full Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="text" id="product" placeholder="Product Name" required />
+      <input type="date" id="purchaseDate" required />
+
+      <label class="section-label">Rate the Product:</label>
+      <div class="stars" id="starRating">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <input type="hidden" id="rating" name="rating" value="0"/>
+
+      <textarea id="review" placeholder="Write your detailed review..." required></textarea>
+
+      <label class="section-label">Would you recommend this product?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="recommend" value="Yes" required /> Yes</label>
+        <label><input type="radio" name="recommend" value="No" /> No</label>
+      </div>
+
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
