@@ -56,8 +56,11 @@ const backgrounds = [
 ];
 
 let currentBg = 0;
-document.getElementById('bgToggle').addEventListener('click', () => {
-  currentBg = (currentBg + 1) % backgrounds.length;
-  document.body.style.background = backgrounds[currentBg];
-});
+const bgToggle = document.getElementById('bgToggle');
+if (bgToggle) {
+  bgToggle.addEventListener('click', () => {
+    currentBg = (currentBg + 1) % backgrounds.length;
+    document.body.style.background = backgrounds[currentBg];
+  });
+}
 
