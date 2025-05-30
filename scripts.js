@@ -63,4 +63,22 @@ if (bgToggle) {
     document.body.style.background = backgrounds[currentBg];
   });
 }
+const formBackgrounds = [
+  '#ffffff',
+  '#f0f8ff',
+  '#fffaf0',
+  '#e8f5e9',
+  '#f3e5f5'
+];
+
+let currentFormBg = 0;
+const formToggle = document.getElementById('formToggle');
+const reviewContainer = document.querySelector('.review-container');
+
+if (formToggle && reviewContainer) {
+  formToggle.addEventListener('click', () => {
+    currentFormBg = (currentFormBg + 1) % formBackgrounds.length;
+    reviewContainer.style.background = formBackgrounds[currentFormBg];
+  });
+}
 
