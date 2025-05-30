@@ -10,6 +10,26 @@ body {
   min-height: 100vh;
 }
 
+.toggle-button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.toggle-button:hover {
+  background-color: #4f46d4;
+}
+
 .review-container {
   background: #ffffff;
   padding: 30px;
