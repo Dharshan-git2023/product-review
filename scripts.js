@@ -47,3 +47,17 @@ form.addEventListener("submit", function (e) {
   highlightStars(-1);
   ratingInput.value = 0;
 });
+const backgrounds = [
+  'linear-gradient(to bottom right, #c2e9fb, #a1c4fd)',
+  'linear-gradient(to bottom right, #fbc2eb, #a6c1ee)',
+  'linear-gradient(to bottom right, #d4fc79, #96e6a1)',
+  'linear-gradient(to bottom right, #ffecd2, #fcb69f)',
+  'linear-gradient(to bottom right, #a1c4fd, #c2e9fb)'
+];
+
+let currentBg = 0;
+document.getElementById('bgToggle').addEventListener('click', () => {
+  currentBg = (currentBg + 1) % backgrounds.length;
+  document.body.style.background = backgrounds[currentBg];
+});
+
